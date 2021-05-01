@@ -224,7 +224,7 @@ class PubSubClient:
 
         if not data.is_channel_points_redeemed:
             return False
-
+        print("someone redeemd")
         forward_event(Event.on_pubsub_custom_channel_point_reward, data, PubSubPointRedemption(data))
         return True
 
